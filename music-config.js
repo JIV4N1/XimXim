@@ -3,7 +3,7 @@
 window.MUSIC_CONFIG = Object.freeze({
   // Sube tu archivo a assets/audio y escribe su ruta aquí, por ejemplo:
   // src: 'assets/audio/mi-cancion.mp3',
-  src: '',
+  src: 'C:\Users\Usuario\Music\Enjambre - La Diferencia (Video oficial).mp3',
   title: 'Una canción especial para ti',
   volume: 0.7,
   loop: true
