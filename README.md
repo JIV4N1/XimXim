@@ -11,7 +11,7 @@ Página estática de Pompompurin, con ilustraciones SVG/CSS dibujadas en código
 window.MUSIC_CONFIG = Object.freeze({
   src: 'assets/audio/mi-cancion.mp3',
   title: 'El título de tu canción',
-  volume: 0.7,
+  volume: 0.35,
   loop: true
 });
 ```
@@ -20,9 +20,11 @@ window.MUSIC_CONFIG = Object.freeze({
 
 Deja `src: ''` para desactivar la música. Usa rutas relativas sin `/` inicial para que funcione también en subdirectorios. El archivo debe existir y respetar exactamente mayúsculas y minúsculas.
 
-Los visitantes pueden escuchar, pausar, avanzar y ajustar el volumen. No hay formulario de subida ni endpoint de escritura: cambiar la canción publicada requiere acceso de escritura a tu repositorio o servidor. Conserva esos permisos solo para ti. La configuración y el audio son recursos públicos al desplegar; no contienen contraseñas ni secretos.
+La canción suena en segundo plano, en bucle y sin reproductor ni controles visibles. El volumen configurado es 35 % (algunos dispositivos pueden imponer su propio volumen multimedia).
 
-Los navegadores suelen bloquear el audio antes de una interacción: la música comienza con el primer toque/clic o tecla, o con el botón de reproducción. Una pausa manual se respeta y no se revierte al tocar la página. Todavía no se incluye ningún audio.
+No hay formulario de subida ni endpoint de escritura: cambiar la canción publicada requiere acceso de escritura a tu repositorio o servidor. Conserva esos permisos solo para ti. La configuración y el audio son recursos públicos al desplegar; no contienen contraseñas ni secretos.
+
+Se intenta reproducir al entrar. Si el navegador bloquea el audio automático con sonido, se reintenta con el primer toque, clic o tecla. Una web no puede garantizar sonido antes de esa interacción en todos los navegadores.
 
 ## Deploy
 

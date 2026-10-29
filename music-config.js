@@ -5,6 +5,6 @@ window.MUSIC_CONFIG = Object.freeze({
   // src: 'assets/audio/mi-cancion.mp3',
   src: 'assets/audio/Enjambre - La Diferencia (Video oficial).mp3',
   title: 'Una canción especial para ti',
-  volume: 0.7,
+  volume: 0.35,
   loop: true
 });
