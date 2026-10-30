@@ -67,3 +67,22 @@ dialog #close { min-width: 44px; min-height: 44px; }
   .tap-hint { max-width: 260px; }
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.falling{top:var(--touch-y);opacity:.9}}
+/* Time-of-day scenes: same fluid illustration, different sky and details. */
+.scene-status { margin: -12px 5% 0; text-align: right; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.scene-flowers { display: none; position: absolute; inset: 0; pointer-events: none; z-index: 4; color: #c6964f; }
+.scene-flowers span { position: absolute; font-size: clamp(26px, 5vw, 40px); }
+.scene-flowers span:nth-child(1) { left: 5%; bottom: 19%; transform: rotate(-14deg); }
+.scene-flowers span:nth-child(2) { right: 4%; bottom: 26%; color: #da9b92; }
+.scene-flowers span:nth-child(3) { left: 19%; top: 15%; font-size: 22px; }
+body[data-scene='morning'] { --bg: #fff9e8; --glow: #f7e9ab; --ink: #60442f; --muted: #887151; }
+body[data-scene='afternoon'] { --bg: #fff0e2; --glow: #f4c7a2; --ink: #6a4032; --muted: #94705e; --line: #e8cdb8; }
+body[data-scene='morning'] .moon, body[data-scene='afternoon'] .moon { background: #efc45e; box-shadow: 0 0 0 10px #efc45e15, 0 0 48px #eeb74840; }
+body[data-scene='morning'] .moon:after, body[data-scene='afternoon'] .moon:after { display: none; }
+body[data-scene='afternoon'] .moon { background: #eaa16a; top: 18%; box-shadow: 0 0 0 12px #eaa16a18, 0 0 60px #eaa16a60; }
+body[data-scene='afternoon'] .cloud { background: #fff5e9; }
+body[data-scene='morning'] .sleep, body[data-scene='afternoon'] .sleep { visibility: hidden; }
+body[data-scene='morning'] .scene-flowers { display: block; }
+body[data-scene='morning'] .s1, body[data-scene='morning'] .s3 { visibility: hidden; }
+body[data-scene='afternoon'] .art-star { opacity: .45; animation: none; }
+body[data-scene='night'] .art-star { color: #f3d48b; }
+@media(max-width:480px) { .scene-status { margin-top: -4px; font-size: 10px; } }

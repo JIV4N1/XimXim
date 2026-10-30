@@ -2,7 +2,7 @@ const $=s=>document.querySelector(s),audio=$('#audio');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 function purinRain(x,y){const layer=$('#rain');if(layer.children.length>=30)layer.firstChild.remove();const item=document.createElementNS('http://www.w3.org/2000/svg','svg');item.setAttribute('viewBox','0 0 300 290');item.classList.add('falling');item.style.left=Math.max(0,Math.min(innerWidth-80,x-40))+'px';item.style.setProperty('--drift',(Math.random()*80-40)+'px');item.style.setProperty('--rotation',(Math.random()*100-50)+'deg');item.style.setProperty('--touch-y',Math.max(0,y-40)+'px');item.innerHTML='<use href="#purin"/>';layer.append(item);setTimeout(()=>item.remove(),reduced.matches?900:3200)}
 document.addEventListener('pointerdown',e=>purinRain(e.clientX,e.clientY));
-$('#night').addEventListener('click',()=>{const on=document.body.classList.toggle('night');$('#night').setAttribute('aria-pressed',on);$('#night span').textContent=on?'Luz de día':'Luz de luna'});
+
 $('#wish').addEventListener('click',()=>{$('#letter').showModal();for(let i=0;i<7;i++)setTimeout(()=>purinRain(innerWidth*(.15+Math.random()*.7),100),i*120)});
 $('#close').addEventListener('click',()=>$('#letter').close());$('#letter').addEventListener('click',e=>{if(e.target===$('#letter')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close()}});
 // Music is configured by the owner; no visitor controls are rendered.
