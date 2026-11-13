@@ -19,3 +19,9 @@
 }
 @keyframes study-arrive{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 @keyframes study-match{50%{transform:scale(.96)}}
+.instrument-drawing {background:radial-gradient(ellipse at center,#fffdf8,#f7ecd3);border:1px solid #e3d4b5;border-radius:16px;padding:clamp(4px,2vw,18px)}
+.instrument-drawing svg {display:block;width:min(100%,480px);margin:auto;fill:#c5cdd0;stroke:#49585d;stroke-width:3}
+.instrument-drawing ellipse {fill:none;stroke-width:6}
+.instrument-drawing.identified .instrument-feature {fill:#f9ce71;stroke:#8a5529}
+@media(prefers-reduced-motion:no-preference){.instrument-feature{transition:fill .35s,stroke .35s}.identified .instrument-feature{animation:instrument-glow .65s ease-out}}
+@keyframes instrument-glow{50%{filter:drop-shadow(0 0 4px #dda844)}}

@@ -33,6 +33,7 @@ function activityMenu() {
   el('h3','Aprende jugando');
   const grid = el('div',''); grid.className = 'practice-grid';
   for (const [title,description,action] of [
+    ['Reconoce el instrumental','Observa la silueta e identifica la pieza quirúrgica.',() => instrumentRound()],
     ['Conecta las parejas','Une cuatro conceptos con su función.',matchRound],
     ['Resuelve un caso','Interpreta cinco situaciones de aula con pistas opcionales.',() => {
       const cases = scenarios.map(([id,casePrompt,hint]) => ({...items.find(item=>item.id===id),casePrompt,hint}));
