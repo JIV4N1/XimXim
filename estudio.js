@@ -104,12 +104,12 @@ function show() {
 function advance(correct) {
   save(deck[index],correct); if (!correct) missed.push(deck[index]);
   if (++index<deck.length) return show();
-  clear(); el('h2',kind==='cards'?'Repaso terminado':kind==='cases'?'Casos resueltos':'Resultado del simulacro');
+  clear(); el('h2',kind==='cards'?'Repaso terminado':kind==='cases'?'Casos resueltos':kind==='errors'?'Errores corregidos':'Resultado de la práctica');
   el('p',(deck.length-missed.length)+' de '+deck.length+(kind==='cards'?' conceptos recordados.':' respuestas correctas.'));
   if(missed.length) {
     el('h3','Conceptos para reforzar');
     for(const item of missed) el('p',item.topic+' · '+item.answer);
-    button('Practicar estos errores',()=>start([...missed],'cards'),screenArea,'accent');
+    button('Practicar estos errores',()=>start(missed.map(entry => items.find(item => item.id === entry.id)),'cards'),screenArea,'accent');
   }
   button('Volver a los módulos',home);
 }
