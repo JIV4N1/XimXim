@@ -44,6 +44,7 @@ function home() {
     const tile = button('', () => moduleView(i), grid, 'tile');
     el('strong',name,tile); el('small',summary,tile);
   });
+  activityMenu();
   const due = items.filter(x => progress[x.id]?.due <= Date.now());
   button('Simulacro mixto · 10 preguntas', () => start(shuffled(modules.flatMap((_,i) => shuffled(items.filter(x=>x.group===i)).slice(0,2))), 'exam'), screenArea,'accent');
   if (due.length) button('Repasar pendientes (' + due.length + ')', () => start(shuffled(due),'cards'));
@@ -65,8 +66,12 @@ function start(list, mode) {
 function show() {
   clear(); button('← Módulos',home);
   const item = deck[index];
+  meter(index, deck.length);
   el('p',(kind==='cards'?'Ficha ':'Pregunta ') + (index+1) + ' de ' + deck.length + ' · ' + item.topic);
-  const box = el('article',''); el('h2',item.question,box);
+  const box = el('article',''); el('h2',item.casePrompt || item.question,box);
+  if (kind==='cases') {
+    const hint = el('details','',box); el('summary','Consultar una pista',hint); el('p',item.hint,hint);
+  }
   if (kind==='cards') {
     el('p','Responde de memoria antes de revelar la ficha.',box);
     const reveal = button('Ver respuesta',()=>{
@@ -79,6 +84,7 @@ function show() {
     for (const choice of shuffled(item.choices)) button(choice,()=>{
       options.replaceChildren();
       const correct = choice===item.answer;
+      react(correct);
       el('strong',correct?'¡Correcto!':'Tu respuesta: '+choice,box);
       el('p','Respuesta correcta: '+item.answer+'. '+item.explanation,box).className='feedback';
       source(item,box);
@@ -89,7 +95,7 @@ function show() {
 function advance(correct) {
   save(deck[index],correct); if (!correct) missed.push(deck[index]);
   if (++index<deck.length) return show();
-  clear(); el('h2',kind==='cards'?'Repaso terminado':'Resultado del simulacro');
+  clear(); el('h2',kind==='cards'?'Repaso terminado':kind==='cases'?'Casos resueltos':'Resultado del simulacro');
   el('p',(deck.length-missed.length)+' de '+deck.length+(kind==='cards'?' conceptos recordados.':' respuestas correctas.'));
   if(missed.length) {
     el('h3','Conceptos para reforzar');
