@@ -56,8 +56,16 @@ function moduleView(i) {
   const list = items.filter(x=>x.group===i);
   button('Practicar con fichas',()=>start(shuffled(list),'cards'),screenArea,'accent');
   button('Evaluarme en este tema',()=>start(shuffled(list),'exam'));
+  el('h3','Guía de lectura');
+  for (const [heading, explanation, , , , , page] of lessons[i]) {
+    const section = el('article','');
+    el('h3',heading,section);
+    el('p',explanation,section);
+    source({source: modules[i][1], page},section);
+  }
   activityMenu();
-  for (const item of list) {
+  el('h3','Conceptos básicos');
+  for (const item of list.slice(0, list.length - lessons[i].length)) {
     const box = el('article',''); el('h3',item.answer,box); el('p',item.explanation,box); source(item,box);
   }
 }
