@@ -35,6 +35,33 @@ const lessons = [
       "Grupo sanguíneo",
       "Antecedente de cirugía previa",
       21
+    ],
+    [
+      "Espinal y epidural: distinguir el compartimento",
+      "Ambas técnicas se estudian dentro de la anestesia regional. La espinal se asocia con el espacio subaracnoideo, que contiene líquido cefalorraquídeo. La epidural recibe su nombre del espacio situado por fuera de la duramadre. Si una pregunta solo dice «anestesia regional», todavía falta el dato anatómico para elegir entre ambas.",
+      "¿Qué técnica sitúa el anestésico fuera de la duramadre, en el espacio que le da nombre?",
+      "Epidural",
+      "Espinal",
+      "Inhalatoria",
+      13
+    ],
+    [
+      "Bloqueos periféricos y territorio",
+      "Un bloqueo periférico se relaciona con el territorio de un nervio o plexo. En el material, el plexo braquial sirve para estudiar la extremidad superior. Al comparar un plexo con un bloqueo espinal, identifica primero si la descripción menciona un conjunto de nervios periféricos o un espacio próximo al sistema nervioso central.",
+      "¿Con qué territorio se relaciona el plexo braquial?",
+      "Extremidad superior",
+      "Extremidad inferior",
+      "Pared abdominal inferior",
+      12
+    ],
+    [
+      "Leer una valoración preanestésica",
+      "Organiza los datos en tres grupos: antecedentes y reacciones previas, estado actual y verificación del procedimiento. Una alergia o una reacción en una cirugía anterior aporta información diferente a una medición actual de presión arterial. Los medicamentos habituales y suplementos también forman parte de la historia.",
+      "¿Cuál de estos datos pertenece a los antecedentes anestésicos?",
+      "Reacción ocurrida durante una anestesia previa",
+      "Temperatura al salir del quirófano",
+      "Dolor referido en recuperación",
+      19
     ]
   ],
   [
@@ -73,6 +100,33 @@ const lessons = [
       "Nylon",
       "Acero inoxidable",
       15
+    ],
+    [
+      "Seda, acero y nylon: separar origen de permanencia",
+      "La seda procede de una fibra orgánica, el acero es una aleación metálica y el nylon es sintético. El curso los agrupa entre los no absorbibles. Esto muestra por qué «natural» y «absorbible» no son sinónimos. Al describir un hilo conviene declarar por separado su composición, su estructura y su comportamiento en el organismo.",
+      "¿Qué ejemplo muestra que una sutura natural puede clasificarse como no absorbible?",
+      "Seda quirúrgica",
+      "Polidioxanona",
+      "Poliglecaprona 25",
+      16
+    ],
+    [
+      "Soporte temporal y permanencia",
+      "Una sutura absorbible sostiene los bordes durante parte de la cicatrización y se degrada progresivamente. Con los materiales no absorbibles importa además la ubicación: una sutura cutánea externa puede retirarse, mientras que una interna puede permanecer. Por ello, «no absorbible» por sí solo no especifica si habrá retirada manual.",
+      "¿Qué dato adicional ayuda a interpretar el destino de una sutura no absorbible?",
+      "Si queda externa o interna",
+      "Solo el número de ceros",
+      "Solo el color de la hebra",
+      12
+    ],
+    [
+      "Una línea de tiempo de las suturas",
+      "El material recorre las fibras naturales antiguas, el desarrollo de las técnicas quirúrgicas y la aparición de materiales sintéticos. Asocia el siglo XVI con Ambroise Paré, el XIX con la antisepsia de Joseph Lister y el XX con el desarrollo de materiales sintéticos. Así puedes distinguir un cambio en las prácticas de un cambio en la composición del hilo.",
+      "¿En qué siglo sitúa la presentación el desarrollo de materiales sintéticos de sutura?",
+      "Siglo XX",
+      "Siglo XVI",
+      "Siglo XIX",
+      7
     ]
   ],
   [
@@ -111,6 +165,33 @@ const lessons = [
       "Visualizar, iluminar y grabar",
       "Insuflar, irrigar y aspirar",
       8
+    ],
+    [
+      "Reconocer el lápiz por sus componentes",
+      "El lápiz tiene un cuerpo que se sostiene con la mano, un cable que lo conecta al generador y una punta activa. Puede incorporar botones y puntas intercambiables. En una fotografía, la conexión con el generador y la punta destinada al contacto con el tejido ayudan a reconocerlo incluso cuando la forma concreta de la punta cambia.",
+      "¿Qué parte del lápiz se relaciona directamente con el punto de aplicación?",
+      "Punta activa",
+      "Cable de alimentación del generador",
+      "Superficie del pedal",
+      10
+    ],
+    [
+      "Interpretar corte y coagulación",
+      "En el material, corte se refiere a la división del tejido y coagulación al efecto utilizado para controlar sangrado. Un mismo equipo puede ofrecer ambas funciones. Conviene separar tres preguntas al leer una figura: qué efecto se busca, qué componente lo activa y por dónde circula la corriente. El nombre de un modo no identifica por sí solo todo el circuito.",
+      "¿Qué par nombra efectos sobre el tejido y no componentes del aparato?",
+      "Corte y coagulación",
+      "Lápiz y placa",
+      "Generador y pedal",
+      9
+    ],
+    [
+      "Localizar el retorno en un dibujo sin etiquetas",
+      "Una figura muestra un lápiz y otra superficie separada en contacto con el paciente. Para interpretarla, localiza primero el sitio de trabajo y luego la pieza que completa el regreso al generador. Si el dibujo muestra dos ramas de una pinza con tejido entre sus puntas, el trayecto local corresponde al modelo bipolar.",
+      "¿Qué imagen identifica el modelo monopolar descrito en el material?",
+      "Lápiz activo y placa de retorno separada",
+      "Dos polos en puntas de una pinza",
+      "Solo una pantalla de video",
+      5
     ]
   ],
   [
@@ -149,6 +230,33 @@ const lessons = [
       "Rodilla y labrum acetabular",
       "Cadera y meniscos de la rodilla",
       19
+    ],
+    [
+      "Elegir el nombre por región y acceso",
+      "Dos estudios pueden ser diagnósticos y, aun así, observar regiones muy distintas. La laparoscopia explora abdomen o pelvis mediante pequeñas incisiones. La artroscopia observa una articulación. La colonoscopia examina la luz del colon. Para resolver una pregunta, empieza por la región y después comprueba si el acceso descrito coincide.",
+      "¿Qué técnica examina la luz del colon?",
+      "Colonoscopia",
+      "Artroscopia",
+      "Laparoscopia",
+      4
+    ],
+    [
+      "La imagen en laparoscopia",
+      "Piensa en la imagen como una cadena: la fuente ilumina el campo, la óptica permite observar la cavidad, la cámara capta la imagen y el monitor la muestra. El puerto solo ofrece acceso y el insuflador cumple otra función. Esta separación ayuda a etiquetar la torre sin atribuirle a cada pieza todas las funciones del equipo.",
+      "¿Qué componente muestra al equipo la imagen captada por la cámara?",
+      "Monitor",
+      "Puerto",
+      "Insuflador",
+      14
+    ],
+    [
+      "Diagnóstico y tratamiento en artroscopia",
+      "Identificar una alteración articular es una finalidad diagnóstica. Actuar sobre una lesión durante la exploración es una finalidad terapéutica. El material ejemplifica ambas con la rodilla y también describe el hombro, la cadera, el tobillo y el codo. «Artroscopia» identifica la región general y el método, no una lesión única.",
+      "¿Qué dato permite clasificar una artroscopia como terapéutica en un ejemplo de aula?",
+      "Se trata una lesión articular",
+      "Solo se registra una imagen",
+      "Solo se observa el cartílago",
+      17
     ]
   ],
   [
@@ -187,6 +295,33 @@ const lessons = [
       "Cierre de la cremallera",
       "Corriente entre electrodos",
       24
+    ],
+    [
+      "Mangos y hojas de bisturí",
+      "El bisturí desmontable se estudia como dos piezas: mango y hoja. La presentación asocia el mango número 3 con las hojas 10, 11, 12 y 15, y el número 4 con el grupo 20 a 25. En una pregunta de identificación, el número del mango y el de la hoja pertenecen a series diferentes.",
+      "Según el cuadro de clase, ¿qué hoja se asocia con el mango número 3?",
+      "15",
+      "22",
+      "24",
+      7
+    ],
+    [
+      "Puntas, mandíbulas y articulación",
+      "Las puntas son los extremos distales que contactan con la estructura. Las mandíbulas constituyen la zona de prensión y pueden tener superficies trabajadas para mejorar el agarre. La caja de traba permite que ambas ramas giren entre sí. Si un esquema señala el eje de movimiento, no está señalando el mecanismo de cierre.",
+      "¿Qué estructura actúa como bisagra entre las ramas?",
+      "Caja de traba",
+      "Cremallera",
+      "Anilla",
+      4
+    ],
+    [
+      "Agrupar por la acción principal",
+      "Clasifica un instrumento preguntando qué hace: cortar, comprimir un punto de sangrado, sujetar, apartar, manejar una aguja o retirar líquidos. Un separador mantiene la exposición; una pinza de tracción sostiene una estructura y un portagujas sostiene la aguja. Que varios tengan mango o anillas no los coloca en la misma familia funcional.",
+      "¿Qué criterio explica las seis familias de instrumental de la presentación?",
+      "Acción principal",
+      "Longitud del mango",
+      "Número de anillas",
+      6
     ]
   ]
 ];
