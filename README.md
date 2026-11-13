@@ -30,7 +30,7 @@ Se intenta reproducir al entrar. Si el navegador bloquea el audio automático co
 
 Publica el contenido de la raíz de este repositorio como archivos estáticos. El documento de entrada es `index.html`.
 
-- **Servidor propio:** copia `index.html`, `style.css`, `app.js`, `music-config.js` y la carpeta `assets/` al directorio público.
+- **Servidor propio:** publica todos los archivos HTML, CSS, JS y SVG de la raíz de la rama main junto con la carpeta assets/. La portada y estudio.html deben quedar en el mismo directorio público.
 - **Hosting conectado a GitHub:** selecciona `main`, sin comando de build, y directorio de publicación `.`.
 - **GitHub Pages:** en Settings → Pages, selecciona Deploy from a branch, rama `main`, carpeta `/ (root)`.
 

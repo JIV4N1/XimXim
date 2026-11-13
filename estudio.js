@@ -37,6 +37,7 @@ function source(item, parent) {
 }
 function home() {
   clear();
+  activityMenu();
   el('h2','Tu guía de enfermería quirúrgica');
   el('p','Elige un tema para leer los conceptos y practicar de memoria. El simulacro mezcla preguntas de los cinco módulos.');
   const grid = el('div',''); grid.className = 'grid';
@@ -44,7 +45,6 @@ function home() {
     const tile = button('', () => moduleView(i), grid, 'tile');
     el('strong',name,tile); el('small',summary,tile);
   });
-  activityMenu();
   const due = items.filter(x => progress[x.id]?.due <= Date.now());
   button('Simulacro mixto · 10 preguntas', () => start(shuffled(modules.flatMap((_,i) => shuffled(items.filter(x=>x.group===i)).slice(0,2))), 'exam'), screenArea,'accent');
   if (due.length) button('Repasar pendientes (' + due.length + ')', () => start(shuffled(due),'cards'));
@@ -56,6 +56,7 @@ function moduleView(i) {
   const list = items.filter(x=>x.group===i);
   button('Practicar con fichas',()=>start(shuffled(list),'cards'),screenArea,'accent');
   button('Evaluarme en este tema',()=>start(shuffled(list),'exam'));
+  activityMenu();
   for (const item of list) {
     const box = el('article',''); el('h3',item.answer,box); el('p',item.explanation,box); source(item,box);
   }
